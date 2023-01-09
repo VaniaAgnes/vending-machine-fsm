@@ -2,7 +2,7 @@
 
 ## Preface
 
-For the project, I create a finite state machine for a coke vending machine. Each coke cost 75 cent. The nominal of the money that we can insert is a dollar and quarter cent (25 cent). Here is the details of the vending machine:
+For the project, I create a finite state machine for a coke vending machine. Each coke cost 75 cent. The nominal of the money that we can insert is a dollar and quater cent (25 cent). Here is the details of the vending machine:
 
 State:
 
@@ -13,7 +13,7 @@ State:
 Input:
 
 - A dollar ($1): Money with 1 dollar nominal.
-- A quarter (25c): Money with 25 cent nominal.
+- A quater (25c): Money with 25 cent nominal.
 
 Output:
 
@@ -42,7 +42,7 @@ Output:
 
 ### Boolean Representation
 
-| Current State | Input (Dollar) | Input (Quarter) | Next State | Output (Coke) | Output (Change) |
+| Current State | Input (Dollar) | Input (Quater) | Next State | Output (Coke) | Output (Change) |
 | ------------- | -------------- | -------------- | ---------- | ------------- | --------------- |
 | Idle          | 0              | 0              | Idle       | 0             | 0               |
 | Idle          | 1              | 0              | Idle       | 1             | 1               |
@@ -67,7 +67,7 @@ The code of each state:
 
 We then create and alias to represent the code of the state, Q1 and Q0. Q1 is for the most left, and Q0 is for the most right. Here is the state encoded table
 
-| Current State | Q1 Current | Q0 Current | Input (Dollar) | Input (Quarter) | Next State | Q1 Next | Q0 Next | Output (Coke) | Output (Change) |
+| Current State | Q1 Current | Q0 Current | Input (Dollar) | Input (Quater) | Next State | Q1 Next | Q0 Next | Output (Coke) | Output (Change) |
 | ------------- | ---------- | ---------- | -------------- | -------------- | ---------- | ------- | ------- | ------------- | --------------- |
 | Idle          | 0          | 0          | 0              | 0              | Idle       | 0       | 0       | 0             | 0               |
 | Idle          | 0          | 0          | 0              | 1              | 25c        | 0       | 1       | 0             | 0               |
@@ -93,8 +93,40 @@ Starting from here, please refer to these following abbreviation:
 - Q1 Next will be Q1N
 - Q0 Next will be Q0N
 - Dollar Input will be DI
-- Quarter Input will be QI
+- Quater Input will be QI
 
 Here is the output of the karnaugh map
 
 <img src="./karnaugh-map.JPG" width="600">
+
+## Testing
+
+### First Appearance
+
+<img src="./images/first appearance.JPG" height="200">
+
+### Simulation #1 (Input 3 quarter)
+
+1. Input a quarter
+
+<img src="./images/input 25c.JPG" height="240">
+
+2. Input a second quarter
+
+<img src="./images/input 50c.JPG" height="240">
+
+3. Input a third quarter
+
+Input the last quarter
+<img src="./images/input 75c.JPG" height="200">
+
+Output, dispense coke
+<img src="./images/input 75c output.JPG" height="300">
+
+### Simulation #2 (Input a dollar)
+
+Input a dollar
+<img src="./images/input a dollar.JPG" height="200">
+
+Output, dispense coke and get change
+<img src="./images/input a dollar output.JPG" height="360">

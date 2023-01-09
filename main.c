@@ -173,12 +173,16 @@ State evaluate(State state, char money)
   if (stateEnum == C25)
   {
     printf("You've inserted 25 cent, please insert 2 quarter more!\n");
+    printf("\nPress any key to continue!\n");
+    getchar();
     return C25;
   }
 
   if (stateEnum == C50)
   {
     printf("You've inserted 50 cent, please insert a quarter more!\n");
+    printf("\nPress any key to continue!\n");
+    getchar();
     return C50;
   }
 }
