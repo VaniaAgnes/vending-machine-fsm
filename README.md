@@ -118,15 +118,19 @@ Here is the output of the karnaugh map
 3. Input a third quarter
 
 Input the last quarter
+
 <img src="./images/input 75c.JPG" height="200">
 
 Output, dispense coke
+
 <img src="./images/input 75c output.JPG" height="300">
 
 ### Simulation #2 (Input a dollar)
 
 Input a dollar
+
 <img src="./images/input a dollar.JPG" height="200">
 
 Output, dispense coke and get change
+
 <img src="./images/input a dollar output.JPG" height="360">
